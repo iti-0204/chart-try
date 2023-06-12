@@ -1,0 +1,255 @@
+@font-face {
+  font-family: "Bungee Inline";
+  src: url(../fonts/BungeeInline-Regular.ttf);
+}
+
+:root {
+  /* 最後の部署名 */
+  --text_size_ex_large: 48px;
+  /* 質問文 */
+  --text_size_large: 30px;
+  /* yes,no,chart,start */
+  --text_size_medium: 26px;
+  /* 最後の部署説明 */
+  --text_size_small: 15px;
+}
+
+html,
+body {
+  /* overflow: hidden; */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0%;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #f4f19d 0%, #dd54aa 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.topicon {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20vh;
+  margin-top: 40%;
+}
+
+.start-button {
+  width: 200px;
+  height: 65px;
+  background-color: #000000;
+  border-radius: 73px;
+  border: 2.4px solid #ffffff;
+  box-shadow: 0px 0.974886px 9.74886px #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Bungee Inline";
+  font-size: var(--text_size_medium);
+  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 0px 0.974886px 9.74886px #ffffff;
+}
+
+/* .start-button-text{
+
+} */
+
+.border-list {
+  filter: drop-shadow(0px 0.974886px 1.5px #ffffff);
+}
+
+.dli-chevron-round-right {
+  display: inline-block;
+  vertical-align: middle;
+  color: #ffffff;
+  line-height: 1;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  transform: translateX(-25%) rotate(45deg);
+  filter: drop-shadow(0px 0.974886px 9.74886px #ffffff);
+}
+.dli-chevron-round-right::before,
+.dli-chevron-round-right::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  border-radius: 0.1em;
+}
+.dli-chevron-round-right::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.1em;
+}
+.dli-chevron-round-right::after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0.1em;
+}
+
+.left {
+  margin: 0 0 0 -15px;
+}
+
+.right {
+  margin: 0 -15px 0 0;
+}
+
+.question-background {
+  height: 100vh;
+  display: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.foundation {
+  position: relative;
+  width: 340px;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+}
+
+.foundation-back {
+  position: absolute;
+  width: 340px;
+  height: 720px;
+  z-index: 1;
+}
+
+.foundation-back-1 {
+  position: absolute;
+  width: 340px;
+  height: 720px;
+  background-color: #999999;
+  filter: blur(2px);
+  border-radius: 15px;
+  z-index: 1;
+}
+.foundation-back-2 {
+  position: absolute;
+  width: 340px;
+  height: 720px;
+  /* background-color: #999999; */
+  border: 3px solid #e2e3df;
+  filter: blur(2px);
+  border-radius: 15px;
+  z-index: 2;
+}
+.foundation-back-3 {
+  position: absolute;
+  width: 340px;
+  height: 720px;
+  /* background-color: #999999; */
+  border: 3px solid #ffffff;
+  border-radius: 15px;
+  z-index: 3;
+}
+
+.foundation-title {
+  position: absolute;
+  z-index: 2;
+  width: 260px;
+  height: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.foundation-title-1 {
+  position: absolute;
+  z-index: 1;
+  width: 260px;
+  height: 50px;
+  background: rgba(3, 3, 3, 0.5);
+  mix-blend-mode: hard-light;
+  border: 2.95px solid #cc00ff;
+  filter: blur(4.5px);
+  border-radius: 10px;
+}
+.foundation-title-2 {
+  position: absolute;
+  z-index: 2;
+  width: 260px;
+  height: 50px;
+  background: rgba(3, 3, 3, 0.5);
+  mix-blend-mode: hard-light;
+  border: 3.55px solid #cc00ff;
+  filter: blur(1.5px);
+  border-radius: 10px;
+}
+.foundation-title-3 {
+  position: absolute;
+  z-index: 3;
+  width: 260px;
+  height: 50px;
+  background: rgba(3, 3, 3, 0.5);
+  mix-blend-mode: hard-light;
+  border: 1.5px solid rgba(97, 0, 255, 0.2);
+  box-shadow: 0px 3px 3.9px #8300c1, 0px 1.95px 1.5px rgba(14, 0, 21, 0.7),
+    inset -0.195px 0.39px 0.195px rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+.foundation-title-4 {
+  position: absolute;
+  z-index: 4;
+  width: 260px;
+  height: 50px;
+  background: rgba(3, 3, 3, 0.5);
+  border: 2.2px solid #c882ff;
+  filter: blur(0.15px);
+  border-radius: 10px;
+}
+.foundation-title-5 {
+  position: absolute;
+  z-index: 5;
+  width: 260px;
+  height: 50px;
+  border: 2px solid #ffffff;
+  filter: blur(0.1px);
+  border-radius: 10px;
+}
+.foundation-title-text {
+  position: absolute;
+  z-index: 6;
+  /* left: 0;
+  right: 0;
+  margin: 0 auto; */
+  text-align: center;
+  font-family: "Bungee Inline";
+  font-size: var(--text_size_medium);
+  color: #ffffff;
+}
+
+.foundation-circle{
+  width: 270px;
+  height: 270px;
+  position: relative;
+  margin:auto;
+  margin-top: 20%;
+}
+.foundation-circle-1 {
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  mix-blend-mode: hard-light;
+  border-radius: 50%;
+  border: 5px solid #fbffe7;
+  filter: blur(5.625px);
+  z-index: 1;
+}
